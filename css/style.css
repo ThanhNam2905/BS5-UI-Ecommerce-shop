@@ -141,6 +141,35 @@ body {
     border-color: transparent !important;
 }
 
+/* blogs section */
+.blogs__content p {
+    line-height: 1.8rem;
+}
+.blogs__content div {
+    font-size: 14px;
+}
+.blogs__content .btn {
+    padding: 9px 24px !important;
+}
+
+/* about-us section */
+#about {
+    background-color: #f4f0f0;
+}
+.about__content h3::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 48px;
+    background-color: var(--pink-color);
+}
+
+
+
+
 /* ----------- media queries ----------------- */
 @media (min-width: 992px) {
     .nav-item {
