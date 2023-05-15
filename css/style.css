@@ -13,8 +13,106 @@ body {
     font-family: var(--sm-font) !important;
 }
 
-/* Component class */
+/* utilies class */
+.bg-primay {
+    background-color: var(--pink-color) !important;
+}
+.text-primary {
+    color: var(--pink-color) !important;
+}
+
+/* button class */
 .btn--cart span {
     background-color: var(--pink-color) !important;
     color: var(--white-color);
+}
+.btn:not(.nav-btns button) {
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 12px 32px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+    transition: all 0.4s linear;
+}
+.btn:not(.nav-btns button):hover {
+    background-color: var(--pink-color);
+    color: #fff;
+    border-color: var(--pink-color);
+    transition: all 0.4s linear;
+}
+
+/* navbar section */
+.navbar {
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    width: 40px;
+}
+.navbar-brand span {
+    letter-spacing: 2.5px;
+    font-family: var(--lg-font);
+}
+.nav-link {
+    letter-spacing: 0.1rem;
+}
+.nav-link:hover {
+    color: var(--pink-color) !important;
+}
+.nav-item {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+/* banner section */
+#banner {
+    background: url(../images/banner-img-1.jpg) top/cover no-repeat;
+    padding-top: 104px;
+}
+.carousel-item h1 {
+    letter-spacing: 2.5px;
+    font-family: var(--lg-font);
+    font-size: 50px;
+}
+.carousel-item .btn {
+    border-color: #fff !important;
+}
+.carousel-item .btn:hover {
+    border-color: var(--pink-color) !important;
+}
+
+/* collections section */
+.title h3::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 40px;
+    background-color: var(--pink-color);
+}
+.collection__img span {
+    top: 20px;
+    right: 20px;
+    background-color: var(--pink-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.collection__content p {
+    font-size: 20px;
+}
+.active-filter-btn {
+    background-color: var(--pink-color) !important;
+    color: #fff !important;
+    border-color: var(--pink-color) !important;
+}
+.filter-button-group button:hover {
+    color: #fff !important;
+}
+
+/* ----------- media queries ----------------- */
+@media (min-width: 992px) {
+    .nav-item {
+        border-bottom: none;
+    }
 }
