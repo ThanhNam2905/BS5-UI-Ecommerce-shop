@@ -41,7 +41,7 @@ body {
     transition: all 0.4s linear;
 }
 
-/* navbar section */
+/* header section */
 .navbar {
     box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
 }
@@ -60,6 +60,27 @@ body {
 }
 .nav-item {
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+/* cart offcanvas */
+.offcanvas__cart {
+    min-width: 35%;
+}
+.offcanvas__cart .offcanvas-header h5 i.fa-shopping-bag {
+    margin-right: 9px;
+    display: inline-block;
+}
+.offcanvas-body .cart-item__img {
+    width: 25%;
+}
+.offcanvas-body .cart-item__btn--remove {
+    width: 5%;
+}
+.offcanvas-body .cart-item__info {
+    width: 70%;
+}
+.offcanvas-body .cart-item__info .cart-item__price,
+.offcanvas-body .cart-item__info .cart-item__quantity {
+    font-size: 14px !important;
 }
 
 /* banner section */

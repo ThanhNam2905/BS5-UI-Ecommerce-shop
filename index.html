@@ -27,17 +27,151 @@
                             <span class="text-uppercase fw-lighter ms-2">Amazone</span>
                         </a>
                         <div class="order-lg-2 nav-btns">
-                            <button type="button" class="btn btn--cart position-relative">
-                                <i class="fa fa-shopping-cart fs-5"></i>                               
-                                <span class="position-absolute start-100 translate-middle badge bg-primary">5</span>
+                            <!-- Component OffCanvas -->
+                            <button 
+                                type="button" class="btn btn--cart position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                            >
+                                <i class="fa fa fa-shopping-bag fs-5 text-secondary"></i>                               
+                                <span class="position-absolute start-100 translate-middle badge rounded-circle">5</span>
                             </button>
-                            <button type="button" class="btn btn--cart position-relative">
-                                <i class="fa fa-heart fs-5"></i>                               
-                                <span class="position-absolute start-100 translate-middle badge bg-primary">3</span>
-                            </button>
-                            <button type="button" class="btn btn--cart position-relative">
+                            <button 
+                                type="button" class="btn btn--cart position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopSearch" aria-controls="offcanvasTopSearch"
+                            >
                                 <i class="fa fa-search fs-5"></i>                               
                             </button>
+                        </div>
+
+                        <!-- Component OffCanvas Search -->
+                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopSearch" aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header py-1 d-flex justify-content-end">
+                                <button type="button" class="btn-close text-reset me-4 pt-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body text-center p-0">
+                                <h5 class="mb-3">Search Product</h5>
+                                <div class="w-50 position-relative mx-auto">
+                                    <input type="search" name="search" id="search" class="w-100 py-3 px-4 rounded-3 border-1" placeholder="Search product in here...">
+                                    <button type="button" class="border-0 position-absolute bg-primay text-white top-0 end-0 h-100 px-4 border-bottom border-top border-end border-secondary rounded-3">
+                                        <i class="fa fa-search fs-5"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Component OffCanvas Cart-->
+                        <div 
+                            class="offcanvas offcanvas-end offcanvas__cart" 
+                            tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+                            data-bs-scroll="true"
+                        >
+                            <div class="offcanvas-header border-bottom">
+                                <h5 class="offcanvasRightLabel">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    Your Cart
+                                </h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body mx-1 my-2">
+                                <div class="cart-list">
+                                    <div class="cart-item d-flex mb-4">
+                                        <div class="cart-item__img overflow-hidden">
+                                            <img src="./images/c_pant_girl.png" alt="c_pant_girl.png" class="w-100 rounded-2">
+                                        </div>
+                                        <div class="cart-item__info ms-3 me-4">
+                                            <h5 class="cart-item__name fs-5 text-capitalize">pant girl</h5>
+                                            <div class="cart-item__price fst-italic fs-6 mb-2">
+                                                Price:
+                                                <span class="d-inline-block ms-2 fw-bold">$45.00</span>
+                                            </div>
+                                            <div class="cart-item__quantity fst-italic">
+                                                <label for="qty_item">Quantity: </label>
+                                                <input type="number" name="qty_item" id="qty_item" value="1" class="w-25 ms-3 py-2 ps-3 pe-2 rounded-3">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="cart-item__btn--remove">
+                                            <button type="button" class="text-reset border-0 rounded-2">
+                                                <i class="fa fa-trash-alt text-danger"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item d-flex mb-4">
+                                        <div class="cart-item__img overflow-hidden">
+                                            <img src="./images/c_formal_gray_shirt.png" alt="c_formal_gray_shirt.png" class="w-100 rounded-2">
+                                        </div>
+                                        <div class="cart-item__info ms-3 me-4">
+                                            <h5 class="cart-item__name fs-5 text-capitalize">gray girl</h5>
+                                            <div class="cart-item__price fst-italic fs-6 mb-2">
+                                                Price:
+                                                <span class="d-inline-block ms-2 fw-bold">$35.00</span>
+                                            </div>
+                                            <div class="cart-item__quantity fst-italic">
+                                                <label for="qty_item">Quantity: </label>
+                                                <input type="number" name="qty_item" id="qty_item" value="2" class="w-25 ms-3 py-2 ps-3 pe-2 rounded-3">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="cart-item__btn--remove">
+                                            <button type="button" class="text-reset border-0 rounded-2">
+                                                <i class="fa fa-trash-alt text-danger"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item d-flex mb-4">
+                                        <div class="cart-item__img overflow-hidden">
+                                            <img src="./images/c_polo-shirt.png" alt="c_polo-shirt.png" class="w-100 rounded-2">
+                                        </div>
+                                        <div class="cart-item__info ms-3 me-4">
+                                            <h5 class="cart-item__name fs-5 text-capitalize">polo shirt</h5>
+                                            <div class="cart-item__price fst-italic fs-6 mb-2">
+                                                Price:
+                                                <span class="d-inline-block ms-2 fw-bold">$49.00</span>
+                                            </div>
+                                            <div class="cart-item__quantity fst-italic">
+                                                <label for="qty_item">Quantity: </label>
+                                                <input type="number" name="qty_item" id="qty_item" value="1" class="w-25 ms-3 py-2 ps-3 pe-2 rounded-3">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="cart-item__btn--remove">
+                                            <button type="button" class="text-reset border-0 rounded-2">
+                                                <i class="fa fa-trash-alt text-danger"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item d-flex mb-4">
+                                        <div class="cart-item__img overflow-hidden">
+                                            <img src="./images/c_t-shirt_men.png" alt="c_t-shirt_men.png" class="w-100 rounded-2">
+                                        </div>
+                                        <div class="cart-item__info ms-3 me-4">
+                                            <h5 class="cart-item__name fs-5 text-capitalize">t-shirt men</h5>
+                                            <div class="cart-item__price fst-italic fs-6 mb-2">
+                                                Price:
+                                                <span class="d-inline-block ms-2 fw-bold">$69.00</span>
+                                            </div>
+                                            <div class="cart-item__quantity fst-italic">
+                                                <label for="qty_item">Quantity: </label>
+                                                <input type="number" name="qty_item" id="qty_item" value="1" class="w-25 ms-3 py-2 ps-3 pe-2 rounded-3">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="cart-item__btn--remove">
+                                            <button type="button" class="text-reset border-0 rounded-2">
+                                                <i class="fa fa-trash-alt text-danger"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-footer py-3 px-4 border-top">
+                                <div class="sub-total d-flex align-items-center justify-content-between">
+                                    <h5 class="fs-5">Subtotal</h5>
+                                    <p class="fs-5 fw-bold">$299.00</p>
+                                </div>
+                                <button type="button" class="btn bg-secondary w-100 my-2 text-white rounded-2">Continue to Checkout</button>
+                            </div>
                         </div>
 
                         <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
@@ -545,7 +679,6 @@
                         </div>
                     </div>
                 </section>  <!--  End popular section  -->
-
 
                 <section class="newsletter py-5">
                     <div class="container pt-4">
